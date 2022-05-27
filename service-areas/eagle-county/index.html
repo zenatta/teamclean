@@ -1,0 +1,2631 @@
+
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        window._currentDevice = 'desktop';
+        window.Parameters = window.Parameters || {
+            AjaxContainer: 'div.dmBody',
+            WrappingContainer: 'div.dmOuter',
+            HomeUrl: 'https://www.teamclean.com/',
+            AccountUUID: 'b358372e319843a998b4329824a72415',
+            SystemID: 'US_DIRECT_PRODUCTION',
+            SiteAlias: 'bfe324c7',
+            SiteId: '2490481',
+            SiteType: atob('RFVEQU9ORQ=='),
+            PublicationDate: 'Sun May 15 17:13:09 UTC 2022',
+            ExternalUid: null,
+            IsSiteMultilingual: false,
+            InitialPostAlias: '',
+            InitialDynamicItem: '',
+            InitialPageAlias: 'service-areas/eagle-county',
+            InitialPageUuid: '4ce211a5e41b44aaa633a730762cde3f',
+            InitialEncodedPageAlias: 'c2VydmljZS1hcmVhcy9lYWdsZS1jb3VudHk=',
+            CurrentPageUrl: '',
+            IsCurrentHomePage: false,
+            AllowAjax: false,
+            AfterAjaxCommand: null,
+            HomeLinkText: 'Back To Home',
+            UseGalleryModule: false,
+            CurrentThemeName: 'Layout Theme',
+            ThemeVersion: '5900',
+            DefaultPageAlias: '',
+            RemoveDID: true,
+            WidgetStyleID: null,
+            IsHeaderFixed: false,
+            IsHeaderSkinny: false,
+            IsBfs: true,
+            StorePageAlias: 'null',
+            StorePagesUrls: 'e30=',
+            IsNewStore: 'false',
+            StorePath: '',
+            StoreId: 'null',
+            StoreVersion: 0,
+            StoreBaseUrl: '',
+            StoreCleanUrl: true,
+            StoreDisableScrolling: true,
+            NotificationSubDomain: 'teamclean',
+            HasCustomDomain: true,
+            showCookieNotification: true,
+            cookiesNotificationMarkup: ' <div>We use cookies to ensure that we give you the best experience on our website. To learn more, go to the Privacy Page.<\/div> \n',
+            translatedPageUrl: '',
+            isFastMigrationSite: false,
+            sidebarPosition: 'NA',
+            currentLanguage: 'en',
+            NavItems: '{}',
+            errors: {
+                general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+                password: 'Incorrect name/password combination',
+                tryAgain: 'Try again'
+            },
+            NavigationAreaParams: {
+                ShowBackToHomeOnInnerPages: true,
+                NavbarSize: -1,
+                NavbarLiveHomePage: 'https://www.teamclean.com/',
+                BlockContainerSelector: '.dmBody',
+                NavbarSelector: '#dmNav:has(a)',
+                SubNavbarSelector: '#subnav_main'
+            },
+            hasCustomCode: true,
+            planID: '7',
+            customTemplateId: 'null',
+            siteTemplateId: 'null',
+            productId: 'DM_DIRECT',
+            disableTracking: false,
+            pageType: 'FROM_SCRATCH',
+            isRuntimeServer: true,
+            siteCacheKey: '1652634835151_bfe324c7',
+            siteInfo: null,
+        };
+
+        window.Parameters.LayoutID = {};
+        window.Parameters.LayoutID[window._currentDevice] = 6;
+        window.Parameters.LayoutVariationID = {};
+        window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Injecting site-wide to the head -->
+
+
+
+
+    <!-- End Injecting site-wide to the head -->
+
+    <!-- Inject secured cdn script -->
+
+
+    <!-- ========= Meta Tags ========= -->
+    <!-- PWA settings -->
+    <script>
+        function toHash(str) {
+            var hash = 5381, i = str.length;
+            while (i) {
+                hash = hash * 33 ^ str.charCodeAt(--i)
+            }
+            return hash >>> 0
+        }
+    </script>
+    <script>
+        (function (global) {
+            //const cacheKey = global.cacheKey;
+            const isOffline = 'onLine' in navigator && navigator.onLine === false;
+            const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+            if (isOffline) {
+                console.log('offline mode');
+            }
+            if (!hasServiceWorkerSupport) {
+                console.log('service worker is not supported');
+            }
+            if (hasServiceWorkerSupport && !isOffline) {
+                window.addEventListener('load', function () {
+                    const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+                    navigator.serviceWorker
+                        .register(serviceWorkerPath, { scope: './' })
+                        .then(
+                            function (registration) {
+                                // Registration was successful
+                                console.log(
+                                    'ServiceWorker registration successful with scope: ',
+                                    registration.scope
+                                );
+                            },
+                            function (err) {
+                                // registration failed :(
+                                console.log('ServiceWorker registration failed: ', err);
+                            }
+                        )
+                        .catch(function (err) {
+                            console.log(err);
+                        });
+                });
+
+                // helper function to refresh the page
+                var refreshPage = (function () {
+                    var refreshing;
+                    return function () {
+                        if (refreshing) return;
+                        // prevent multiple refreshes
+                        var refreshkey = 'refreshed' + location.href;
+                        var prevRefresh = localStorage.getItem(refreshkey);
+                        if (prevRefresh) {
+                            localStorage.removeItem(refreshkey);
+                            if (Date.now() - prevRefresh < 30000) {
+                                return; // dont go into a refresh loop
+                            }
+                        }
+                        refreshing = true;
+                        localStorage.setItem(refreshkey, Date.now());
+                        console.log('refereshing page');
+                        window.location.reload();
+                    };
+                })();
+
+                function messageServiceWorker(data) {
+                    return new Promise(function (resolve, reject) {
+                        if (navigator.serviceWorker.controller) {
+                            var worker = navigator.serviceWorker.controller;
+                            var messageChannel = new MessageChannel();
+                            messageChannel.port1.onmessage = replyHandler;
+                            worker.postMessage(data, [messageChannel.port2]);
+                            function replyHandler(event) {
+                                resolve(event.data);
+                            }
+                        } else {
+                            resolve();
+                        }
+                    });
+                }
+            }
+        })(window);
+    </script>
+    <!-- Add manifest -->
+    <!-- End PWA settings -->
+
+
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+
+    <link rel="canonical" href="https://www.teamclean.com/service-areas/eagle-county">
+
+    <meta id="view" name="viewport"
+          content=", initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--Add favorites icons-->
+
+    <link rel="apple-touch-icon" href="https://irp-cdn.multiscreensite.com/bfe324c7/dms3rep/multi/favicon.png"/>
+
+    <link rel="icon" type="image/x-icon" href="https://irp-cdn.multiscreensite.com/bfe324c7/site_favicon_16_1612220274375.ico"/>
+
+    <!-- End favorite icons -->
+
+    <link rel="preconnect" href="https://lirp.cdn-website.com/" crossorigin />
+
+
+
+
+
+    <!-- render the required CSS and JS in the head section -->
+    <script>
+        window.SystemID = 'US_DIRECT_PRODUCTION';
+
+        if(!window.dmAPI) {
+            window.dmAPI = {
+                registerExternalRuntimeComponent: function() {
+                },
+                getCurrentDeviceType: function() {
+                    return window._currentDevice;
+                }
+            };
+        }
+
+        if (!window.requestIdleCallback) {
+            window.requestIdleCallback = function (fn) {
+                setTimeout(fn, 0);
+            }
+        }
+
+        function loadCSS(link) {
+            try {
+                var urlParams = new URLSearchParams(window.location.search);
+                var noCSS = !!urlParams.get('nocss');
+                var cssTimeout = urlParams.get('cssTimeout') || 0;
+
+                if (noCSS) {
+                    return;
+                }
+                requestIdleCallback(function () {
+                    window.setTimeout(function () {
+                        link.onload = null;
+                        link.rel = 'stylesheet';
+                        link.type = 'text/css'
+                    }, parseInt(cssTimeout, 10));
+                });
+            } catch (e) {/* Never fail - this is just a tool for measurements */}
+        }
+
+    </script>
+    <style id="forceCssIncludes">
+        /* This file is auto-generated from a `scss` file with the same name */
+
+        .videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}.dmMobileBody .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}.dmDesktopBody .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}#dm [data-show-on-page-only]{display:none!important}
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function loadCSS(link) {
+            try {
+                var urlParams = new URLSearchParams(window.location.search);
+                var noCSS = !!urlParams.get('nocss');
+                var cssTimeout = urlParams.get('cssTimeout') || 0;
+
+                if (noCSS) {
+                    return;
+                }
+                requestIdleCallback(function () {
+                    window.setTimeout(function () {
+                        link.onload = null;
+                        link.rel = 'stylesheet';
+                        link.type = 'text/css'
+                    }, parseInt(cssTimeout, 10));
+                });
+            } catch (e) {/* Never fail - this is just a tool for measurements */}
+        }
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css?family=Roboto:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Montserrat:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Lato:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Fjalla+One:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic&amp;subset=latin-ext&amp;display=swap"  />
+
+
+
+
+    <!-- RT CSS Include d-css-runtime-desktop-one-package-new-->
+    <link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/2564/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-new.min.css" />
+
+    <!-- End of RT CSS Include -->
+
+
+
+
+    <link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/production_2564/6a3ad1de101d6db916cd291e31d112c0.css" id="widgetCSS" />
+
+
+
+    <!-- Support `img` size attributes -->
+    <style>img[width][height] {height: auto;}</style>
+
+    <!-- Support showing sticky element on page only -->
+    <style>
+        body[data-page-alias="service-areas/eagle-county"] #dm [data-show-on-page-only="service-areas/eagle-county"]{
+            display: block !important;
+        }
+    </style>
+
+    <!-- This is populated in Ajax navigation -->
+    <style id="pageAdditionalWidgetsCss" type="text/css">
+    </style>
+
+
+
+
+    <!-- Site CSS -->
+    <link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/bfe324c7/files/bfe324c7_1.min.css?v=101" id="siteGlobalCss" />
+
+
+
+    <style id="customWidgetStyle" type="text/css">
+
+    </style>
+    <style id="innerPagesStyle" type="text/css">
+
+    </style>
+
+    <style id="additionalGlobalCss" type="text/css">
+    </style>
+
+    <style id="pagestyle" type="text/css">
+        *#dm *.dmBody div.u_1374253223{
+            border-color:rgba(255,159,0,1) !important;
+            border-width:1px !important;
+            border-style:solid !important}
+        *#dm *.dmBody div.u_1171347051{
+            background-color:rgba(255,255,255,1) !important}
+        *#dm *.dmBody div.u_1082927628{
+            background-color:rgba(0,0,0,0) !important;
+            border-left-color:rgba(255,159,0,1) !important;
+            border-left-style:solid !important;
+            border-left-width:0 !important}
+        *#dm *.dmBody nav.u_1413568036.main-navigation.unifiednav .unifiednav__container[data-depth]>.unifiednav__item-wrap:not(:last-child)::after{
+            border-top-width:0 !important}
+        *#dm *.dmBody nav.u_1413568036.main-navigation.unifiednav[data-nav-structure='VERTICAL'] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after{
+            border-top-color:rgba(49,112,142,1) !important}
+        *#dm *.dmBody nav.u_1413568036.main-navigation.unifiednav{
+            background-color:rgba(0,0,0,0) !important}
+        *#dm *.dmBody *.u_1413568036.main-navigation.unifiednav[data-nav-structure='VERTICAL'] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after{
+            width:100% !important}
+        *#dm *.dmBody nav.u_1413568036.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item:hover{
+            color:rgba(255,159,0,1) !important;
+            font-weight:bold !important}
+        *#dm *.dmBody nav.u_1413568036.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.hover{
+            color:rgba(255,159,0,1) !important;
+            font-weight:bold !important}
+        *#dm *.dmBody nav.u_1413568036.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected{
+            color:rgba(255,159,0,1) !important;
+            font-weight:bold !important}
+        *#dm *.dmBody *.u_1413568036.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{
+            margin-left:0 !important;
+            padding-top:10px !important;
+            padding-left:0 !important;
+            padding-bottom:10px !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important;
+            padding-right:0 !important}
+        *#dm *.dmBody div.u_1004284610{
+            background-color:rgba(49,112,142,1) !important}
+        *#dm *.dmBody div.u_1968187821{
+            background-color:rgba(0,0,0,0) !important;
+            border-color:rgba(49,112,142,1) !important;
+            border-width:1px !important;
+            border-style:solid !important;
+            border-radius:5px !important;
+            -moz-border-radius:5px !important;
+            -webkit-border-radius:5px !important}
+        *#dm *.dmBody *.u_1980189291 *.open-hours-item dt{
+            text-align:CENTER !important}
+        *#dm *.dmBody *.u_1980189291 *.open-hours-item dd{
+            text-align:CENTER !important}
+        *#dm *.dmBody *.u_1980189291 *.open-hours-item time{
+            text-align:CENTER !important}
+        *#dm *.dmBody *.u_1980189291 *.open-hours-special{
+            text-align:CENTER !important}
+        *#dm *.dmBody *.u_1980189291 *.dmwidget-title{
+            text-align:CENTER !important}
+        *#dm *.dmBody div.u_1980189291 *.open-hours-item dt{
+            color:rgba(255,255,255,1) !important}
+        *#dm *.dmBody div.u_1980189291 *.open-hours-item dd{
+            color:rgba(255,255,255,1) !important}
+        *#dm *.dmBody div.u_1980189291 *.open-hours-item time{
+            color:rgba(255,255,255,1) !important}
+        *#dm *.dmBody div.u_1980189291 *.open-hours-special{
+            color:rgba(255,255,255,1) !important}
+        *#dm *.dmBody div.u_1040371330{
+            background-color:rgba(49,112,142,1) !important}
+        *#dm *.dmBody div.u_1980699974 *.socialHubIcon{
+            background-color:rgba(255,255,255,1) !important;
+            color:rgba(255,159,0,1) !important;
+            border-color:rgba(255,159,0,1) !important}
+        *#dm *.dmBody div.u_1216202109{
+            background-color:rgba(0,0,0,0) !important;
+            border-color:rgba(49,112,142,1) !important;
+            border-width:1px !important;
+            border-style:solid !important;
+            border-radius:5px !important;
+            -moz-border-radius:5px !important;
+            -webkit-border-radius:5px !important}
+        *#dm *.dmBody div.u_1049566445{
+            background-color:rgba(49,112,142,1) !important}
+        *#dm *.dmBody nav.u_1902336813.main-navigation.unifiednav .unifiednav__container[data-depth]>.unifiednav__item-wrap:not(:last-child)::after{
+            border-top-width:0 !important}
+        *#dm *.dmBody nav.u_1902336813.main-navigation.unifiednav[data-nav-structure='VERTICAL'] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after{
+            border-top-color:rgba(49,112,142,1) !important}
+        *#dm *.dmBody nav.u_1902336813.main-navigation.unifiednav{
+            background-color:rgba(0,0,0,0) !important}
+        *#dm *.dmBody *.u_1902336813.main-navigation.unifiednav[data-nav-structure='VERTICAL'] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after{
+            width:100% !important}
+        *#dm *.dmBody nav.u_1902336813.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item:hover{
+            color:rgba(255,159,0,1) !important;
+            font-weight:bold !important}
+        *#dm *.dmBody nav.u_1902336813.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.hover{
+            color:rgba(255,159,0,1) !important;
+            font-weight:bold !important}
+        *#dm *.dmBody nav.u_1902336813.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected{
+            color:rgba(255,159,0,1) !important;
+            font-weight:bold !important}
+        *#dm *.dmBody *.u_1902336813.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{
+            margin-left:0 !important;
+            padding-top:10px !important;
+            padding-left:0 !important;
+            padding-bottom:10px !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important;
+            padding-right:0 !important}
+        *#dm *.dmBody div.u_1942134452{
+            background-color:rgba(0,0,0,0) !important;
+            border-color:rgba(49,112,142,1) !important;
+            border-width:0 !important;
+            border-style:solid !important;
+            border-right-style:solid !important;
+            border-bottom-style:solid !important;
+            border-top-left-radius:5px !important;
+            border-top-style:solid !important;
+            border-left-style:solid !important}
+        *#dm *.dmBody div.u_1557796016{
+            background-color:rgba(255,255,255,1) !important;
+            border-top-style:solid !important;
+            border-top-color:rgba(49,112,142,1) !important;
+            border-right-style:solid !important;
+            border-top-width:0 !important;
+            border-right-width:0 !important}
+        *#dm *.dmBody div.u_1856203721{
+            border-style:solid !important;
+            border-width:0 !important;
+            border-color:rgba(49,112,142,1) !important;
+            border-top-style:solid !important;
+            border-top-width:2px !important;
+            border-right-style:solid !important;
+            border-right-width:2px !important}
+        *#dm *.dmBody div.u_1321916523 img[dm_changed]{
+            border-right-style:solid !important;
+            border-right-color:rgba(255,159,0,1) !important;
+            border-bottom-style:solid !important;
+            border-bottom-color:rgba(255,159,0,1) !important;
+            border-bottom-width:0 !important;
+            border-right-width:0 !important}
+        *#dm *.dmBody div.u_1321916523 img{
+            border-right-style:solid !important;
+            border-right-color:rgba(255,159,0,1) !important;
+            border-bottom-style:solid !important;
+            border-bottom-color:rgba(255,159,0,1) !important;
+            border-bottom-width:0 !important;
+            border-right-width:0 !important}
+        *#dm *.dmBody a.u_1617670179 span.text{
+            color:rgba(255,255,255,1) !important;
+            font-weight:bold !important}
+        *#dm *.dmBody a.u_1029473943 span.text{
+            color:rgba(255,255,255,1) !important;
+            font-weight:bold !important}
+        *#dm *.dmBody a.u_1029473943{
+            background-color:rgba(255,159,0,1) !important;
+            border-radius:5px !important;
+            -moz-border-radius:5px !important;
+            -webkit-border-radius:5px !important;
+            border-style:solid !important;
+            border-width:0 !important}
+        *#dm *.dmBody a.u_1029473943:hover{
+            background-color:rgba(255,255,255,1) !important;
+            background-image:none !important}
+        *#dm *.dmBody a.u_1029473943.hover{
+            background-color:rgba(255,255,255,1) !important;
+            background-image:none !important}
+        *#dm *.dmBody a.u_1029473943:hover span.text{
+            color:rgba(49,112,142,1) !important}
+        *#dm *.dmBody a.u_1029473943.hover span.text{
+            color:rgba(49,112,142,1) !important}
+        *#dm *.dmBody a.u_1617670179{
+            background-color:rgba(255,159,0,1) !important;
+            border-radius:5px !important;
+            -moz-border-radius:5px !important;
+            -webkit-border-radius:5px !important;
+            border-color:rgba(255,255,255,1) !important;
+            border-style:solid !important;
+            border-width:0 !important}
+        *#dm *.dmBody a.u_1617670179:hover span.text{
+            text-decoration:none !important;
+            font-weight:bold !important;
+            color:rgba(49,112,142,1) !important}
+        *#dm *.dmBody a.u_1617670179.hover span.text{
+            text-decoration:none !important;
+            font-weight:bold !important;
+            color:rgba(49,112,142,1) !important}
+        *#dm *.dmBody a.u_1617670179:hover{
+            background-color:rgba(255,255,255,1) !important;
+            background-image:none !important}
+        *#dm *.dmBody a.u_1617670179.hover{
+            background-color:rgba(255,255,255,1) !important;
+            background-image:none !important}
+        *#dm *.dmBody div.u_1980189291 *.dmwidget-title{
+            color:rgba(255,255,255,1) !important}
+        *#dm *.dmBody div.u_1875865377 *.color-overlay{
+            background-color:rgba(0,0,0,0) !important}
+        *#dm *.dmBody *.u_1483573263{
+            background-image:url(https://lirp.cdn-website.com/md/dmtmpl/dms3rep/multi/opt/transparent_background-2880w.png) !important}
+        *#dm *.dmBody *.u_1893897744{
+            background-image:url(https://lirp.cdn-website.com/md/dmtmpl/dms3rep/multi/opt/transparent_background-2880w.png) !important}
+        *#dm *.dmBody *.u_1328995474{
+            background-image:url(https://lirp.cdn-website.com/md/dmtmpl/dms3rep/multi/opt/transparent_background-2880w.png) !important}
+        *#dm *.dmBody div.u_1875865377 *.slides *.slide-text{
+            color:rgba(49,112,142,1) !important;
+            font-family:Montserrat !important;
+            font-weight:normal !important}
+        *#dm *.dmBody div.u_1875865377{
+            border-color:rgba(80,133,165,1) !important;
+            border-width:0 !important;
+            border-style:solid !important}
+        *#dm *.dmBody div.u_1875865377 .slides .slide-button:hover{
+            background-color:rgba(0,0,0,0) !important;
+            background-image:none !important}
+        *#dm *.dmBody div.u_1875865377 .slides .slide-button.hover{
+            background-color:rgba(0,0,0,0) !important;
+            background-image:none !important}
+        *#dm *.dmBody div.u_1875865377 .slides .slide-button{
+            border-style:solid !important;
+            border-width:0 !important;
+            border-radius:0 !important;
+            -moz-border-radius:0 !important;
+            -webkit-border-radius:0 !important}
+        *#dm *.dmBody *.u_1875865377 .slides .slide-button span.text{
+            width:auto !important}
+        *#dm *.dmBody div.u_1875865377 *.slides *.slide-title{
+            color:rgba(49,112,142,1) !important;
+            font-weight:normal !important;
+            font-family:Oxygen !important}
+        *#dm *.dmBody *.u_1875865377 .slides>li .rteBlock{
+            display:block !important;
+            text-align:center !important}
+        *#dm *.dmBody *.u_1875865377 *.flex-direction-nav a{
+            color:rgba(49,112,142,1) !important;
+            width:35px !important;
+            overflow:visible !important;
+            height:35px !important}
+        *#dm *.dmBody *.u_1875865377 *.flex-direction-nav a:before{
+            font-size:35px !important}
+        *#dm *.dmBody a.u_1135672532 span.text{
+            text-decoration:underline !important}
+        *#dm *.dmBody a.u_1135672532:hover span.text{
+            color:rgba(255,159,0,1) !important}
+        *#dm *.dmBody a.u_1135672532.hover span.text{
+            color:rgba(255,159,0,1) !important}
+        *#dm *.dmBody a.u_1135672532:hover{
+            background-color:rgba(0,0,0,0) !important;
+            background-image:none !important}
+        *#dm *.dmBody a.u_1135672532.hover{
+            background-color:rgba(0,0,0,0) !important;
+            background-image:none !important}
+        *#dm *.dmBody a.u_1135672532{
+            border-style:solid !important;
+            border-width:0 !important;
+            border-radius:0 !important;
+            -moz-border-radius:0 !important;
+            -webkit-border-radius:0 !important}
+        *#dm *.dmBody div.u_1994168851{
+            border-color:rgba(255,159,0,1) !important;
+            border-width:1px !important;
+            border-style:solid !important;
+            background-color:rgba(143,193,227,0.16) !important}
+        *#dm *.dmBody *.u_1308612225{
+            background-position:0 0 !important}
+        *#dm *.dmBody *.u_1054350271{
+            background-position:0 0 !important}
+        *#dm *.dmBody *.u_1121309286{
+            background-position:0 0 !important}
+        *#dm *.dmBody *.u_1280973294{
+            background-position:0 0 !important}
+    </style>
+
+    <style id="pagestyleDevice" type="text/css">
+        *#dm *.dmBody div.u_1563438330{
+            margin-left:0 !important;
+            padding-top:30px !important;
+            padding-left:0 !important;
+            padding-bottom:30px !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important;
+            padding-right:0 !important;
+            width:auto !important}
+        *#dm *.dmBody nav.u_1413568036{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:312px !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:12px !important;
+            padding-left:15px !important;
+            padding-bottom:12px !important;
+            max-width:100% !important;
+            justify-content:center !important;
+            align-items:stretch !important;
+            padding-right:15px !important;
+            min-width:0 !important;
+            text-align:center !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            margin-top:10px !important;
+            margin-bottom:0 !important}
+        *#dm *.dmBody div.u_1004284610{
+            display:block !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:25px !important;
+            padding-left:0 !important;
+            padding-bottom:25px !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            max-width:100% !important;
+            margin-top:39px !important;
+            margin-bottom:0 !important;
+            padding-right:0 !important;
+            min-width:25px !important}
+        *#dm *.dmBody div.u_1171347051{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:auto !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:0 !important;
+            padding-left:20px !important;
+            padding-bottom:0 !important;
+            max-width:100% !important;
+            padding-right:20px !important;
+            min-width:0 !important;
+            text-align:center !important;
+            margin-right:0 !important;
+            margin-left:0 !important;
+            margin-top:0 !important;
+            margin-bottom:25px !important}
+        *#dm *.dmBody div.u_1082927628{
+            padding-top:0 !important;
+            padding-right:0 !important;
+            margin-left:0 !important}
+        *#dm *.dmBody div.u_1968187821{
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-right:0 !important;
+            padding-bottom:5px !important;
+            margin-left:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important}
+        *#dm *.dmBody div.u_1473241217{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:2px !important;
+            padding-left:0 !important;
+            padding-bottom:2px !important;
+            max-width:792px !important;
+            padding-right:0 !important;
+            min-width:25px !important;
+            display:block !important;
+            margin-right:0 !important;
+            margin-left:0 !important;
+            margin-top:8px !important;
+            margin-bottom:8px !important}
+        *#dm *.dmBody h5.u_1648393842{
+            display:block !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:504px !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            max-width:100% !important;
+            margin-top:18px !important;
+            margin-bottom:0 !important;
+            padding-right:0 !important;
+            min-width:0 !important;
+            text-align:center !important}
+        *#dm *.dmBody div.u_1648393842{
+            display:block !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:100% !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:2px !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            max-width:calc(100% - 0px) !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            padding-right:0 !important;
+            min-width:25px !important}
+        *#dm *.dmBody div.u_1980189291{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:100% !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            max-width:100% !important;
+            margin-top:10px !important;
+            margin-bottom:0 !important;
+            padding-right:0 !important;
+            min-width:0 !important;
+            text-align:center !important;
+            display:block !important}
+        *#dm *.dmBody *.u_1980699974 *.socialHubIcon{
+            width:25px !important;
+            height:25px !important;
+            font-size:16.666666666666668px !important;
+            line-height:25px !important}
+        *#dm *.dmBody *.u_1980699974 *.socialHubIcon:after{
+            width:33px !important;
+            height:25px !important}
+        *#dm *.dmBody *.u_1980699974 *.socialHubInnerDiv a:not(:last-child){
+            margin-right:10px !important}
+        *#dm *.dmBody div.u_1942134452{
+            padding-top:0 !important;
+            padding-right:0 !important;
+            margin-left:0 !important}
+        *#dm *.dmBody div.u_1040371330{
+            padding-bottom:30px !important;
+            padding-top:40px !important;
+            padding-left:15px !important;
+            padding-right:15px !important;
+            margin-left:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important}
+        *#dm *.dmBody div.u_1856203721{
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            padding-right:0 !important;
+            height:471px !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            max-width:760.781px !important;
+            min-width:25px !important;
+            text-align:center !important;
+            margin-right:0 !important;
+            margin-left:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important}
+        *#dm *.dmBody div.u_1557796016{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:auto !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            max-width:100% !important;
+            padding-right:0 !important;
+            min-width:0 !important;
+            text-align:center !important;
+            margin-right:0 !important;
+            margin-left:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important}
+        *#dm *.dmBody nav.u_1902336813{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 33px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:12px !important;
+            padding-left:25px !important;
+            padding-bottom:12px !important;
+            max-width:232px !important;
+            justify-content:center !important;
+            align-items:stretch !important;
+            padding-right:15px !important;
+            min-width:25px !important;
+            text-align:start !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important}
+        *#dm *.dmBody div.u_1095336098{
+            margin-left:0 !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:7px !important;
+            padding-right:0 !important}
+        *#dm *.dmBody div.u_1049566445{
+            display:block !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:25px !important;
+            padding-left:0 !important;
+            padding-bottom:25px !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            max-width:100% !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            padding-right:0 !important;
+            min-width:25px !important}
+        *#dm *.dmBody div.u_1793108503{
+            margin-left:0 !important;
+            padding-top:25px !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important;
+            padding-right:0 !important;
+            width:auto !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            position:relative !important;
+            height:auto !important;
+            max-width:100% !important;
+            min-width:0 !important;
+            text-align:start !important}
+        *#dm *.dmBody div.u_1216202109{
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-right:0 !important;
+            padding-bottom:5px !important}
+        *#dm *.dmBody div.u_1155151703{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:2px !important;
+            padding-left:0 !important;
+            padding-bottom:2px !important;
+            max-width:100% !important;
+            padding-right:0 !important;
+            min-width:25px !important}
+        *#dm *.dmBody h1.u_1741334762{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:365px !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:2px !important;
+            padding-left:0 !important;
+            padding-bottom:2px !important;
+            max-width:100% !important;
+            padding-right:0 !important;
+            min-width:0 !important;
+            text-align:left !important;
+            display:block !important}
+        *#dm *.dmBody div.u_1741334762{
+            display:block !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:2px !important;
+            padding-left:0 !important;
+            padding-bottom:2px !important;
+            max-width:100% !important;
+            padding-right:0 !important;
+            min-width:25px !important;
+            margin-right:0 !important;
+            margin-left:0 !important;
+            margin-top:8px !important;
+            margin-bottom:8px !important}
+        *#dm *.dmBody div.u_1610985397{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:2px !important;
+            padding-left:0 !important;
+            padding-bottom:2px !important;
+            max-width:100% !important;
+            padding-right:0 !important;
+            min-width:25px !important}
+        *#dm *.dmBody div.u_1140178084{
+            margin-left:0 !important;
+            padding-top:2px !important;
+            padding-left:0 !important;
+            padding-bottom:2px !important;
+            margin-top:8px !important;
+            margin-bottom:8px !important;
+            margin-right:0 !important;
+            padding-right:0 !important}
+        *#dm *.dmBody div.u_1980699974{
+            display:block !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 139px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            max-width:191px !important;
+            padding-right:0 !important;
+            min-width:25px !important;
+            text-align:center !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            margin-top:25px !important;
+            margin-bottom:0 !important}
+        *#dm *.dmBody div.u_1321916523{
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            padding-right:0 !important;
+            margin-left:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:1px !important}
+        *#dm *.dmBody div.u_1982168199{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:auto !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            max-width:100% !important;
+            padding-right:35px !important;
+            min-width:0 !important;
+            text-align:center !important;
+            margin-left:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important}
+        *#dm *.dmBody div.u_1180143098{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:2px !important;
+            padding-left:0 !important;
+            padding-bottom:2px !important;
+            margin-right:0 !important;
+            margin-left:0 !important;
+            max-width:100% !important;
+            margin-top:40px !important;
+            margin-bottom:8px !important;
+            padding-right:0 !important;
+            min-width:25px !important}
+        *#dm *.dmBody div.u_1501280568{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:auto !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            margin-right:0 !important;
+            margin-left:0 !important;
+            max-width:100% !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            padding-right:35px !important;
+            min-width:0 !important;
+            text-align:center !important}
+        *#dm *.dmBody div.u_1921745833{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 31px) !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:2px !important;
+            padding-left:0 !important;
+            padding-bottom:2px !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            max-width:40px !important;
+            margin-top:20px !important;
+            margin-bottom:8px !important;
+            padding-right:0 !important;
+            min-width:25px !important}
+        *#dm *.dmBody div.u_1844467058{
+            margin-left:0 !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important;
+            padding-right:0 !important}
+        *#dm *.dmBody a.u_1029473943{
+            display:block !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:50px !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            max-width:100% !important;
+            padding-right:0 !important;
+            min-width:25px !important;
+            text-align:center !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            margin-top:10px !important;
+            margin-bottom:10px !important}
+        *#dm *.dmBody a.u_1617670179{
+            display:block !important;
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:50px !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            max-width:218.766px !important;
+            padding-right:0 !important;
+            min-width:25px !important;
+            text-align:center !important;
+            margin-right:auto !important;
+            margin-left:auto !important;
+            margin-top:10px !important;
+            margin-bottom:10px !important}
+        *#dm *.dmBody div.u_1355159682{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:auto !important;
+            position:relative !important;
+            height:auto !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            max-width:100% !important;
+            padding-right:0 !important;
+            min-width:0 !important;
+            text-align:center !important;
+            margin-left:0 !important;
+            margin-top:20px !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important}
+        *#dm *.dmBody div.u_1980189291 *.open-hours-item dt{
+            font-size:18px !important}
+        *#dm *.dmBody div.u_1980189291 *.open-hours-item dd{
+            font-size:18px !important}
+        *#dm *.dmBody div.u_1980189291 *.open-hours-item time{
+            font-size:18px !important}
+        *#dm *.dmBody div.u_1980189291 *.open-hours-special{
+            font-size:18px !important}
+        *#dm *.dmBody div.u_1980189291 *.dmwidget-title{
+            font-size:18px !important}
+        *#dm *.dmBody div.u_1875865377 *.slides *.slide-title{
+            font-size:18px !important}
+        *#dm *.dmBody div.u_1875865377 *.slides *.slide-text{
+            font-size:15px !important}
+        *#dm *.dmBody div.u_1146232474{
+            margin-left:0 !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important;
+            padding-right:0 !important}
+        *#dm *.dmBody div.u_1875865377{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:246px !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            max-width:784.688px !important;
+            padding-right:0 !important;
+            min-width:25px !important;
+            text-align:center !important;
+            display:block !important;
+            margin-right:0.328125px !important;
+            margin-left:0.3125px !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important}
+        *#dm *.dmBody div.u_1994168851{
+            padding-top:10px !important;
+            padding-left:10px !important;
+            padding-bottom:10px !important;
+            padding-right:10px !important;
+            width:auto !important}
+        *#dm *.dmBody div.u_1875865377 *.slides *.slide-title{
+            font-size:18px !important}
+        *#dm *.dmBody div.u_1875865377 *.slides *.slide-text{
+            font-size:15px !important}
+        *#dm *.dmBody div.u_1146232474{
+            margin-left:0 !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+            margin-right:0 !important;
+            padding-right:0 !important}
+        *#dm *.dmBody div.u_1875865377{
+            float:none !important;
+            top:0 !important;
+            left:0 !important;
+            width:calc(100% - 0px) !important;
+            position:relative !important;
+            height:246px !important;
+            padding-top:0 !important;
+            padding-left:0 !important;
+            padding-bottom:0 !important;
+            max-width:784.688px !important;
+            padding-right:0 !important;
+            min-width:25px !important;
+            text-align:center !important;
+            display:block !important;
+            margin-right:0.328125px !important;
+            margin-left:0.3125px !important;
+            margin-top:0 !important;
+            margin-bottom:0 !important}
+        *#dm *.dmBody div.u_1994168851{
+            padding-top:10px !important;
+            padding-left:10px !important;
+            padding-bottom:10px !important;
+            padding-right:10px !important;
+            width:auto !important}
+    </style>
+
+    <!-- Flex Sections CSS -->
+
+
+
+
+
+    <style id="globalFontSizeStyle" type="text/css">
+        .font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-40, .size-40, .size-40 > font { font-size: 40px !important; }.font-size-28, .size-28, .size-28 > font { font-size: 28px !important; }.font-size-40, .size-40, .size-40 > font { font-size: 40px !important; }.font-size-28, .size-28, .size-28 > font { font-size: 28px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-25, .size-25, .size-25 > font { font-size: 25px !important; }.font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-25, .size-25, .size-25 > font { font-size: 25px !important; }.font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }.font-size-8, .size-8, .size-8 > font { font-size: 8px !important; }
+    </style>
+    <style id="pageFontSizeStyle" type="text/css">
+    </style>
+
+
+
+
+
+
+    <style id="hideAnimFix">
+        .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+            visibility: hidden;
+        }
+        .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+            visibility: hidden !important;
+        }
+    </style>
+
+
+
+
+    <!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+    <title>
+        Team Clean: Eagle County House Cleaning Services
+    </title>
+    <meta name="keywords" content="eagle county cleaning services"/>
+    <meta name="description" content="Our exceptional concierge style cleaning services have established and maintained a reputation for creating cleaner, healthier environments everywhere we go."/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K2LRWM0X9M">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    <!-- Facebook Pixel Code -->  <script>
+
+
+
+
+
+
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '272859141134026');
+    fbq('track', 'PageView');
+
+
+
+
+
+
+</script>
+    <noscript>
+    </noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=272859141134026&amp;ev=PageView&amp;noscript=1"/>
+    <!-- End Facebook Pixel Code -->  <script>
+
+
+
+
+
+
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K2LRWM0X9M');
+
+
+
+
+
+
+
+
+</script>
+    <script type="application/ld+json">
+
+
+
+
+
+
+
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Team Clean",
+            "image": "https://lirp-cdn.multiscreensite.com/bfe324c7/dms3rep/multi/opt/team.clean.w.slogan-0b38cb15-462w.png",
+            "url": "https://www.teamclean.com/",
+            "telephone": "970-468-2378",
+            "priceRange": "$",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "330 Fiedler Ave APT 104",
+                "addressLocality": "Dillon",
+                "addressRegion": "CO",
+                "postalCode": "80435",
+                "addressCountry": "US"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.6278645,
+                "longitude": -106.0448763
+            } ,
+            "sameAs": [
+                "https://google.com/maps/place/",
+                "http://yelp.com/biz/",
+                "https://facebook.com/"
+            ]
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Team Clean: Eagle County House Cleaning Services"/>
+    <meta name="twitter:description" content="Our exceptional concierge style cleaning services have established and maintained a reputation for creating cleaner, healthier environments everywhere we go."/>
+    <meta property="og:description" content="Our exceptional concierge style cleaning services have established and maintained a reputation for creating cleaner, healthier environments everywhere we go."/>
+    <meta property="og:title" content="Team Clean: Eagle County House Cleaning Services"/>
+
+
+
+
+    <!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="service-areas/eagle-county"  class="supportsFontIcons supportsFontIcons dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite mac dmLargeBody " style="padding:0;margin:0;"
+>
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+        <div dmwrapped="true" id="1460842227"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations rows-1200 hasStickyHeader dmPageBody d-page-1763854611 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1763854611" data-buttonstyle="BORDER_SHORT" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" layout="7f3c1de367df47d5b45ab63d33101c7b===header"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1601306570 dmRespRow dmDefaultListContentRow fullBleedChanged fullBleedMode" style="text-align:center" id="1601306570"> <div class="dmRespColsWrapper" id="1428614315"> <div class="u_1354689801 small-12 dmRespCol large-2 medium-2" id="1354689801"> <div class="u_1020585748 imageWidget align-center" data-widget-type="image" id="1020585748" data-element-type="image"> <a href="/" id="1543396426"><img src="https://lirp.cdn-website.com/bfe324c7/dms3rep/multi/opt/team.clean.w.slogan-0b38cb15-1920w.png" id="1097184996" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/bfe324c7/dms3rep/multi/team.clean.w.slogan-0b38cb15.png" alt="Team Clean house cleaning services" title="Team Clean" onerror="handleImageLoadError(this)"/></a>
+        </div>
+        </div>
+            <div class="u_1373295004 dmRespCol small-12 large-8 medium-8" id="1373295004"> <nav class="u_1249860206 effect-text-color main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_2" data-show-vertical-sub-items="HOVER" id="1249860206" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul class="unifiednav__container  " data-auto="navigation-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/about-team-clean" class="unifiednav__item  dmUDNavigationItem_010101436714  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         About
+        " data-auto="page-text-style">About<span class="icon icon-angle-down"></span> 
+</span>
+            </a>
+                <ul class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/frequently-asked-questions" class="unifiednav__item  dmUDNavigationItem_010101836005  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           FAQs
+          " data-auto="page-text-style">FAQs<span class="icon icon-angle-right"></span> 
+</span>
+                </a>
+                </li>
+                    <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/reviews" class="unifiednav__item  dmUDNavigationItem_01010147335  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Testimonials
+          " data-auto="page-text-style">Testimonials<span class="icon icon-angle-right"></span> 
+</span>
+                    </a>
+                    </li>
+                    <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/COVID19" class="unifiednav__item  dmUDNavigationItem_010101986945  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           COVID-19
+          " data-auto="page-text-style">COVID-19<span class="icon icon-angle-right"></span> 
+</span>
+                    </a>
+                    </li>
+                </ul>
+            </li>
+                <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services" class="unifiednav__item  dmUDNavigationItem_010101570003  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         House Cleaning Services
+        " data-auto="page-text-style">House Cleaning Services<span class="icon icon-angle-down"></span> 
+</span>
+                </a>
+                    <ul class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/services/vacation-home-cleaning" class="unifiednav__item  dmUDNavigationItem_010101188805  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Vacation Home Services
+          " data-auto="page-text-style">Vacation Home Services<span class="icon icon-angle-right"></span> 
+</span>
+                    </a>
+                    </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/services/carpet-cleaning" class="unifiednav__item  dmUDNavigationItem_010101733020  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Carpet Cleaning Services
+          " data-auto="page-text-style">Carpet Cleaning Services<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/services/snow-removal" class="unifiednav__item  dmUDNavigationItem_01010130578  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Snow Removal Services
+          " data-auto="page-text-style">Snow Removal Services<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/services/handyman" class="unifiednav__item  dmUDNavigationItem_010101597747  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Handyman Services
+          " data-auto="page-text-style">Handyman Services<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/services/laundry" class="unifiednav__item  dmUDNavigationItem_010101447489  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Laundry Services
+          " data-auto="page-text-style">Laundry Services<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/services/move-out-cleaning" class="unifiednav__item  dmUDNavigationItem_010101106547  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Move Out Cleaning
+          " data-auto="page-text-style">Move Out Cleaning<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/services/post-construction-cleaning" class="unifiednav__item  dmUDNavigationItem_010101709425  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Post Construction Cleaning
+          " data-auto="page-text-style">Post Construction Cleaning<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/commercial-services" class="unifiednav__item  dmUDNavigationItem_010101815000  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Commercial Cleaning Services
+        " data-auto="page-text-style">Commercial Cleaning Services<span class="icon icon-angle-down"></span> 
+</span>
+                </a>
+                    <ul class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/commercial-services/janitorial" class="unifiednav__item  dmUDNavigationItem_010101937106  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Janitorial Services
+          " data-auto="page-text-style">Janitorial Services<span class="icon icon-angle-right"></span> 
+</span>
+                    </a>
+                    </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/commercial-services/carpet-cleaning" class="unifiednav__item  dmUDNavigationItem_010101553933  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Carpet Cleaning
+          " data-auto="page-text-style">Carpet Cleaning<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/commercial-services/office-cleaning" class="unifiednav__item  dmUDNavigationItem_010101169389  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Office Cleaning
+          " data-auto="page-text-style">Office Cleaning<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/commercial-services/vinyl-composition-tile" class="unifiednav__item  dmUDNavigationItem_01010164973  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Vinyl Composition Tile
+          " data-auto="page-text-style">Vinyl Composition Tile<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/commercial-services/building-maintenance" class="unifiednav__item  dmUDNavigationItem_01010153615  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Building Maintenance
+          " data-auto="page-text-style">Building Maintenance<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/service-areas" class="unifiednav__item  dmUDNavigationItem_010101323080  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Service Areas
+        " data-auto="page-text-style">Service Areas<span class="icon icon-angle-down"></span> 
+</span>
+                </a>
+                    <ul class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/service-areas/summit-county" class="unifiednav__item  dmUDNavigationItem_010101130188  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Summit County
+          " data-auto="page-text-style">Summit County<span class="icon icon-angle-right"></span> 
+</span>
+                    </a>
+                    </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/service-areas/eagle-county" class="unifiednav__item  dmNavItemSelected  dmUDNavigationItem_010101304846  " target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
+           Eagle County
+          " data-auto="page-text-style">Eagle County<span class="icon icon-angle-right"></span> 
+</span>
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact-team-clean" class="unifiednav__item  dmUDNavigationItem_010101943230  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Contact
+        " data-auto="page-text-style">Contact<span class="icon icon-angle-down"></span> 
+</span>
+                </a>
+                </li>
+            </ul>
+            </nav>
+            </div>
+            <div class="u_1832588899 dmRespCol small-12 large-2 medium-2" id="1832588899"> <a data-display-type="block" class="u_1160030817 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/contact-team-clean#contact-form" data-element-type="dButtonLinkId" id="1160030817"> <span class="iconBg" id="1159834431"> <span class="icon hasFontIcon icon-star" id="1540913749"></span>
+</span>
+                <span class="text" id="1522038943">Request a free estimate</span>
+            </a>
+                <div class="dmNewParagraph u_1626713456" data-element-type="paragraph" data-version="5" id="1626713456" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="text-align-center m-size-17 size-24"><a href="tel:(970) 468-2378" runtime_url="tel:(970) 468-2378" type="call" class="font-size-24 m-font-size-17" style="text-decoration: underline; display: initial; font-weight: 600; color: rgb(49, 112, 142);">(970) 468-2378</a></p></div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+            <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div>
+            <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr/></div>
+                <!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"> <div class="innerPageTitle">Eagle County</div>
+                </div>
+                <div class="titleLine display_None"><hr/></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div dmwrapped="true" id="1460842227" class="dmBody u_dmStyle_template_service-areas/eagle-county"> <div id="allWrapper" class="allWrapper"> <div id="dm_content" class="dmContent"> <div dm:templateorder="1" class="dmDefaultRespTmpl" id="1763854611"> <div class="innerPageTmplBox dmDefaultPage  dmRespRowsWrapper" id="1260607478"> <div class="u_1557796016 dmRespRow" style="text-align: center;" id="1557796016"> <div class="dmRespColsWrapper" id="1553610672"> <div class="u_1040371330 dmRespCol small-12 large-5 medium-5" id="1040371330"> <div class="u_1648393842 dmNewParagraph" id="1648393842" data-element-type="paragraph" data-version="5" data-styletopreserve="{" background-image":""}"=""> <h1 class="text-align-center size-40 m-size-28"><span style="display: initial; color: rgb(255, 255, 255); font-weight: normal;" class="font-size-40 m-font-size-28">Eagle County Office</span><span style="display: initial;"><br/></span></h1>
+            </div> <div class="dmNewParagraph u_1140178084" data-element-type="paragraph" data-version="5" id="1140178084" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-center m-size-13 size-18"><span class="m-font-size-13 font-size-18" style="color: rgb(255, 255, 255); display: initial;">30 Benchmark Rd, Unit G6</span></p><p class="text-align-center m-size-13 size-18"><span class="m-font-size-13 font-size-18" style="color: rgb(255, 255, 255); display: initial;">Avon, Co 81620-1473</span></p></div>
+                <div class="u_1980189291 default dmHoursOfOperation" id="1980189291" dmle_extension="open_hours" data-element-type="open_hours" time_format="12" wr="true" displaytitle="true" forcedisplay="false" icon="true" surround="true" adwords=""> <h3 class="dmwidget-title ">Hours of Operation</h3>
+                    <dl class="open-hours-data"> <div class="open-hours-item"> <dt day="0">Mon - Fri</dt>
+                        <dd> <time>7:00 am</time>
+                            - <time>5:00 pm</time>
+                        </dd>
+                    </div>
+                        <div class="open-hours-item"> <dt day="5">Sat - Sun</dt>
+                            <dd>Closed</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="u_1980699974 align-center text-align-center dmSocialHub" id="1980699974" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://google.com/maps/place/" target="_blank" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;GoogleMyBusiness&apos;)"> <span class="dmSocialGoogleMyBusiness dm-social-icons-google-my-business oneIcon socialHubIcon style8" data-hover-effect=""></span>
+                </a>
+                    <a href="http://yelp.com/biz/" target="_blank" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Yelp&apos;)"> <span class="dmSocialYelp dm-social-icons-yelp oneIcon socialHubIcon style8" data-hover-effect=""></span>
+                    </a>
+                    <a href="mailto:" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)"> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style8" data-hover-effect=""></span>
+                    </a>
+                    <a href="https://facebook.com/" target="_blank" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" data-hover-effect=""></span>
+                    </a>
+                </div>
+                </div>
+                </div>
+                <div class="u_1355159682 dmRespRow" id="1355159682"> <div class="dmRespColsWrapper" id="1383870207"> <div class="u_1697990058 dmRespCol small-12 large-5 medium-5" id="1697990058"> <a data-display-type="block" class="u_1617670179 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/contact-team-clean" data-element-type="dButtonLinkId" id="1617670179"> <span class="iconBg" id="1391133143"> <span class="icon hasFontIcon icon-star" id="1282247590"></span>
+</span>
+                    <span class="text" id="1470152255">Get your free quote</span>
+                </a>
+                </div>
+                    <div class="u_1844467058 dmRespCol small-12 large-2 medium-2" id="1844467058"> <div class="u_1921745833 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1921745833" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-center"><span style="display: initial; color: rgb(255, 255, 255);">or</span></p></div>
+                    </div>
+                    <div class="u_1404130087 dmRespCol small-12 large-5 medium-5" id="1404130087"> <a data-display-type="block" class="u_1029473943 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="tel:(970) 468-2378" data-element-type="dButtonLinkId" id="1029473943"> <span class="iconBg" id="1257157783"> <span class="icon hasFontIcon icon-star" id="1813188161"></span>
+</span>
+                        <span class="text" id="1829140343">Call (970) 821-8000</span>
+                    </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+                <div class="u_1942134452 dmRespCol small-12 large-7 medium-7" id="1942134452"> <div class="u_1856203721 default dmDefaultGradient align-center hasFullWidth inlineMap" data-type="inlineMap" data-lat="39.63429" data-lng="-106.52329" data-address="30 Benchmark Rd, Avon, CO, United States" data-height="" data-msid="" data-mapurl="" data-lang="en" data-color-scheme="#31708e" data-zoom="13" data-layout="layout2" data-popup-display="" data-popup-show="false" data-popup-title="" data-popup-title-visible="false" data-popup-description="" data-popup-description-visible="false" id="1856203721" dmle_extension="mapextension" data-element-type="mapextension" modedesktop="map" modemobile="map" addresstodisplay="30 Benchmark Rd, Avon, CO, United States" geocompleteaddress="30 Benchmark Rd, Avon, CO, United States" data-popup-display-desktop="" data-popup-display-mobile="" data-display-type="block" color-scheme="#31708e" layout="layout2" modetablet="map" wr="true" icon="true" surround="true" description="Find Us" adwords="" icon-name="icon-map-marker" street="" city="" country="US" country_full="United States" state="" zip="" business="Team Clean Inc." provider="mapbox" lon="-106.52329" lat="39.63429" zoom="13" dmmapsource="dm"> <div class="mapContainer" style="height: 100%; width: 100%; overflow: hidden; z-index: 0;"></div>
+                </div>
+                </div>
+            </div>
+            </div>
+                <div class="u_1793108503 dmRespRow" id="1793108503"> <div class="dmRespColsWrapper" id="1200414982"> <div class="u_1185132918 dmRespCol small-12 large-8 medium-8" id="1185132918"> <div class="u_1982168199 dmRespRow" id="1982168199"> <div class="dmRespColsWrapper" id="1304758993"> <div class="dmRespCol small-12 medium-12 large-12 u_1095336098" id="1095336098"> <div class="u_1741334762 dmNewParagraph" data-element-type="paragraph" id="1741334762" style="transition: none 0s ease 0s; text-align: left; display: block;" data-version="5"> <h2 class="size-24 m-size-17"><span style="display: initial; font-style: italic;" class="font-size-24 m-font-size-17">Team Clean has proudly served hundreds of households and business since 2004. We provide a variety of professional cleaning and maintenance services to the Eagle County community.</span></h2>
+                </div> <div class="dmNewParagraph u_1180143098" data-element-type="paragraph" data-version="5" id="1180143098" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h2 class="size-24 m-size-17"><span style="display: initial;" class="font-size-24 m-font-size-17">Looking for carpet cleaning services in Eagle County, Colorado?</span></h2>
+                    <p><span style="display: initial;">Team Clean provides the Eagle County community with professional carpet cleaning services that help your carpets look beautiful and last longer. Our cleaning services are effective by removing trapped dust, allergens and other unwanted bacteria. Invest in regular carpet cleaning from Team Clean. In return, you will get great looking carpets, improved air quality, and a healthier home environment from one of the best carpet cleaning services Eagle County, Colorado. In addition to improving the appearance of your carpets, regular cleaning services can extend their lifespans. Carpet that has been properly cleaned and maintained can last upwards of 10 years longer than carpet that was not. The surest way to get the most out of your carpet investment is to schedule regular carpet cleaning.</span></p></div>
+                    <div class="u_1610985397 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1610985397" style="transition: opacity 1s ease-in-out 0s;"> <h2 class="size-24 m-size-17"><span style="display: initial;" class="font-size-24 m-font-size-17">How often should you get a carpet cleaning?</span></h2>
+                        <p><span style="display: initial;">Carpet cleaning should be scheduled every 6 months, at a minimum. Any longer and you risk the soil being pressed into the underlay and causing a buildup of bacteria and allergens in your carpet. Eagle County carpet cleaning services are generally required more frequently if your carpets see more traffic or you often experience snowy, rainy or muddy days.</span></p></div>
+                    <div class="u_1155151703 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1155151703" style="transition: opacity 1s ease-in-out 0s;"> <h2 class="size-24 m-size-17"><span style="display: initial;" class="font-size-24 m-font-size-17">Our services in Eagle County always prioritize cleaning for health.</span></h2>
+                        <p><span style="display: initial;">Team Clean cares about every home we clean. Our Eagle County cleaning services are timely, professional, and dedicated to your complete satisfaction. Whether we have the pleasure of teaming up with you for a one-time cleaning or provide house cleaning services on a more regular basis, you can count on the same incredible level of quality each time. We provide our house cleaning services in Eagle County, Colorado on weekly, bi-weekly, monthly, and fully custom schedules. Since 2004, Team Clean has been committed to leaving each home better and brighter than we found it, so that our clients can enjoy more and make the most out of their time. Our Eagle County cleaning services take the burden of cleaning and property maintenance out of your hands and turn your home into a clean, healthy sanctuary for you to enjoy.</span></p></div>
+                </div>
+                </div>
+                </div>
+                </div>
+                    <div class="u_1216202109 dmRespCol small-12 large-4 medium-4" id="1216202109"> <div class="u_1049566445 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1049566445" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h4 class="text-align-center"><span style="color: rgb(255, 255, 255); font-weight: normal; display: initial;">Areas we serve in Eagle County</span><span style="display: initial;"><br/></span></h4>
+                    </div>
+                        <nav class="u_1902336813 effect-text-color unifiednav_vertical main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_1" layout-sub="" data-show-vertical-sub-items="HOVER" id="1902336813" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp-cdn.multiscreensite.com/bfe324c7/dms3rep/multi/Team-2BClean-2BOption-2B5-2B-281-29.png" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul class="unifiednav__container  " data-auto="navigation-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/service-areas/eagle-county/avon" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Avon
+            " data-auto="page-text-style">Avon<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/service-areas/eagle-county/beaver-creek" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Beaver Creek
+            " data-auto="page-text-style">Beaver Creek<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/service-areas/eagle-county/eagle-vail" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Eagle-Vail
+            " data-auto="page-text-style">Eagle-Vail<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/service-areas/eagle-county/edwards" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Edwards
+            " data-auto="page-text-style">Edwards<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/service-areas/eagle-county/minturn" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Minturn
+            " data-auto="page-text-style">Minturn<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/service-areas/eagle-county/vail" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Vail
+            " data-auto="page-text-style">Vail<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                        </ul>
+                        </nav>
+                        <div class="imageWidget align-center u_1321916523" data-element-type="image" data-widget-type="image" id="1321916523"> <a id="1569394779"><img src="https://lirp.cdn-website.com/bfe324c7/dms3rep/multi/opt/location%2Bwordcloud-1920w.png" alt="Team Clean Eagle County" id="1732222480" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/bfe324c7/dms3rep/multi/location%2Bwordcloud.png" title="Team Clean location word cloud" onerror="handleImageLoadError(this)"/></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="dmRespRow u_1563438330 fullBleedChanged fullBleedMode" id="1563438330"> <div class="dmRespColsWrapper" id="1878385501"> <div class="dmRespCol large-12 medium-12 small-12" id="1817289785"> <div class="dmNewParagraph u_1374253223" data-element-type="paragraph" data-version="5" id="1374253223" style="transition: opacity 1s ease-in-out 0s;"> <h3 class="text-align-center"><span style="display: initial;"><br/></span></h3>
+                    <h3 class="text-align-center"><span style="display: initial;">To learn more about our Team Clean services,&nbsp;</span><a href="/contact-team-clean" runtime_url="/contact" style="display: initial;" type="page">get a free quote</a><span class="" style="display: initial;"> <span style="display: initial;">or</span>
+</span><a href="tel:(970) 468-2378" runtime_url="tel:(970) 468-2378" type="call" style="display: initial;">call (970) 468-BEST</a><span class="" style="display: initial;"> <span style="display: initial;">today.</span></span></h3>
+                    <h3 class="text-align-center"><span style="display: initial;"><br/></span></h3>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="u_1171347051 dmRespRow" style="text-align: center;" id="1171347051"> <div class="dmRespColsWrapper" id="1950439837"> <div class="u_1082927628 dmRespCol small-12 large-8 medium-8" id="1082927628"> <div class="u_1501280568 dmRespRow" id="1501280568"> <div class="dmRespColsWrapper" id="1114284832"> <div class="dmRespCol small-12 medium-12 large-12" id="1571856876"> <div class="u_1473241217 dmNewParagraph" data-element-type="paragraph" id="1473241217" style="transition: none 0s ease 0s;" data-version="5"> <h2 class="size-24 m-size-17"><span style="display: initial;" class="font-size-24 m-font-size-17">Eagle County house cleaning is one of our specialties.</span></h2>
+                    <p><span class="" style="display: initial;"><span style="display: initial;">The last thing you want is to add house cleaning to your busy schedule. Establishing and maintaining a clean home takes time and can lead to more stress than the mess itself! Fortunately for you, we love tackling dirt and grime and creating a cleaner environment for you and your family. Team Clean uses professional grade disinfectants and equipment for every house cleaning service. Regular house cleaning maintains and strengthens your home&rsquo;s defense against unwanted germs and bacteria. Fresher air, fewer germs, and reduced stress are a few of the many benefits you can expect from our Eagle County house cleaning services.</span>
+</span></p></div></div>
+                </div>
+                </div>
+                    <div class="dmRespRow u_1994168851" id="1994168851"> <div class="dmRespColsWrapper" id="1387417574"> <div class="u_1146232474 dmRespCol small-12 medium-12 large-12" id="1146232474"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1344763114" style="transition: opacity 1s ease-in-out 0s;"> <h3 class="text-align-center m-size-21 size-30"><span class="font-size-30 m-font-size-21" style="display: initial; font-weight: bold;">Praise from our outstanding clients</span></h3>
+                    </div>
+                        <div class="u_1875865377 flex-container dmImageSlider dmNoMargin dmNoMark" data-widget-type="imageSlider" dmle_volatile_widget="true" id="1875865377" data-element-type="dSliderId"> <div class="flexslider ed-version nav-layout-2 arrows-visible" sliderscriptparams="{'stretch':true,'animation':true,'randomize':false,'directionNav':true,'isAutoPlay':false,'isFade':true,'controlNav':false,'slideshowSpeed':7000,'animationDuration':600,'pausePlay':true,'prevText':'','nextText':''}" id="1439413934" layout="center" position="center"> <ul class="slides" id="1624201292"> <li layout="center" position="center" animation="none" show-content="true" color-overlay="true" text-background="true" id="1308612225" class="u_1308612225" show-caption="true"> <a href="/reviews" id="1054350271" file="false" class="u_1054350271"><img dm="true" src="https://lirp.cdn-website.com/bfe324c7/dms3rep/multi/opt/empty_02-1920w.png" id="1073632760" class="" alt="Team Clean is great! The staff is friendly and trustworthy. They deep clean my house multiple times a year and I am never disappointed. Highly recommend!" onerror="handleImageLoadError(this)"/></a>
+                            <div class="color-overlay" id="1908292823"></div>
+                            <div class="slide-inner" id="1562680796"> <div class="text-wrapper" id="1142396277"> <h3 class="slide-title u_1890828028" id="1890828028">Team Clean is great! The staff is friendly and trustworthy. They deep clean my house multiple times a year and I am never disappointed. Highly recommend!</h3>
+                                <div class="slide-text richText u_1467288653" id="1467288653"><br/><p class="rteBlock">-Russ S-</p></div>
+                            </div>
+                                <div class="slide-button dmWidget clearfix slide-button-invisible" id="1848869337"> <span class="iconBg" id="1328679365"> <span class="icon hasFontIcon icon-star" id="1266471987"></span>
+</span>
+                                    <span class="text" id="1720392129">Button</span>
+                                </div>
+                            </div>
+                        </li>
+                            <li layout="center" position="center" animation="none" show-content="true" color-overlay="true" text-background="true" id="1857590643" class="" show-caption="true"><img dm="true" src="https://lirp.cdn-website.com/bfe324c7/dms3rep/multi/opt/empty_02-1920w.png" id="1214052020" class="" alt="We only have great things to say about Team Clean. They are a valuable asset to any short term rental owner in the area." onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1177556081"></div>
+                                <div class="slide-inner" id="1646128862"> <div class="text-wrapper" id="1355618466"> <h3 class="slide-title u_1740155010" id="1740155010">We only have great things to say about Team Clean. They are a valuable asset to any short term rental owner in the area.</h3>
+                                    <div class="slide-text richText u_1120563227" id="1120563227"><br/><p class="rteBlock">-Summit Rental Condos-</p></div>
+                                </div>
+                                    <div class="slide-button dmWidget clearfix slide-button-invisible" id="1578163871"> <span class="iconBg" id="1940216338"> <span class="icon hasFontIcon icon-star" id="1088043214"></span>
+</span>
+                                        <span class="text" id="1508037470">Button</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li layout="center" position="center" animation="none" show-content="true" color-overlay="true" text-background="true" id="1476656386" class="" show-caption="true"> <a href="/reviews" id="1758315821" file="false"><img dm="true" src="https://lirp.cdn-website.com/bfe324c7/dms3rep/multi/opt/empty_02-1920w.png" id="1083058444" class="" alt="Simply the best in the area. I would know since it seems like I have had to try them all just to find reliable, quality service like Team Clean. Your search for reliable service ends here." onerror="handleImageLoadError(this)"/></a>
+                                <div class="color-overlay" id="1388593349"></div>
+                                <div class="slide-inner" id="1352478535"> <div class="text-wrapper" id="1585609603"> <h3 class="slide-title u_1543957117" id="1543957117">Simply the best in the area. I would know since it seems like I have had to try them all just to find reliable, quality service like Team Clean. Your search for reliable service ends here.</h3>
+                                    <div class="slide-text richText u_1050197071" id="1050197071"><br/><p class="rteBlock">-Kevin R-</p></div>
+                                </div>
+                                    <div class="slide-button dmWidget clearfix slide-button-invisible" id="1653341735"> <span class="iconBg" id="1591535543"> <span class="icon hasFontIcon icon-star" id="1222209699"></span>
+</span>
+                                        <span class="text" id="1136300081">Button</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li layout="center" position="center" animation="none" show-content="true" color-overlay="true" text-background="true" id="1121309286" class="u_1121309286" show-caption="true"> <a href="/reviews" id="1543126840" file="false"><img dm="true" src="https://lirp.cdn-website.com/bfe324c7/dms3rep/multi/opt/empty_02-1920w.png" id="1802666985" class="" alt="Great company with an even better staff. Hard to find people like this in Summit." onerror="handleImageLoadError(this)"/></a>
+                                <div class="color-overlay" id="1433067191"></div>
+                                <div class="slide-inner" id="1073715701"> <div class="text-wrapper" id="1816254071"> <h3 class="slide-title u_1923836870" id="1923836870">Great company with an even better staff. Hard to find people like this in Summit.</h3>
+                                    <div class="slide-text richText u_1209324419" id="1209324419"><br/><p class="rteBlock">-Hannah F-</p></div>
+                                </div>
+                                    <div class="slide-button dmWidget clearfix slide-button-invisible" id="1613284419"> <span class="iconBg" id="1534100903"> <span class="icon hasFontIcon icon-star" id="1100212981"></span>
+</span>
+                                        <span class="text" id="1239276887">Button</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li layout="center" position="center" animation="none" show-content="true" color-overlay="true" text-background="true" id="1084321513" class="" show-caption="true"> <a href="/reviews" id="1884461818" file="false"><img dm="true" src="https://lirp.cdn-website.com/bfe324c7/dms3rep/multi/opt/empty_02-1920w.png" id="1647994649" class="" alt="Great job! Completed a move out clean prior to closing of the property, no touch ups needed! Thank you" onerror="handleImageLoadError(this)"/></a>
+                                <div class="color-overlay" id="1696201023"></div>
+                                <div class="slide-inner" id="1959430580"> <div class="text-wrapper" id="1123650546"> <h3 class="slide-title u_1364839866" id="1364839866">Great job! Completed a move out clean prior to closing of the property, no touch ups needed! Thank you</h3>
+                                    <div class="slide-text richText u_1887166909" id="1887166909"><br/><p class="rteBlock">-Jo S-</p></div>
+                                </div>
+                                    <div class="slide-button dmWidget clearfix slide-button-invisible" id="1138789401"> <span class="iconBg" id="1425805251"> <span class="icon hasFontIcon icon-star" id="1833341124"></span>
+</span>
+                                        <span class="text" id="1475865783">Button</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li layout="center" position="center" animation="none" show-content="true" color-overlay="true" text-background="true" id="1483573263" class="u_1483573263" show-caption="true"> <a href="/reviews" id="1760257932" file="false"><img dm="true" src="https://lirp.cdn-website.com/md/dmtmpl/dms3rep/multi/opt/transparent_background-1920w.png" id="1969936861" class="" onerror="handleImageLoadError(this)"/></a>
+                                <div class="color-overlay" id="1941453997"></div>
+                                <div class="slide-inner" id="1254266404"> <div class="text-wrapper" id="1500947151"> <h3 class="slide-title u_1008991764" id="1008991764">&quot;I will definitely recommend Team Clean to my family and friends. I called for a deep clean at the last minute and they immediately provided me with service. The cleaners were very detailed and left my home clean and smelling amazing. I will be using them in the future for sure.&quot;</h3>
+                                    <div class="slide-text u_1754349986" id="1754349986"><br/><p class="rteBlock">-Serghei M-</p></div>
+                                </div>
+                                    <div class="slide-button dmWidget clearfix slide-button-invisible" id="1565987550"> <span class="iconBg" id="1081415179"> <span class="icon hasFontIcon icon-star" id="1317141021"></span>
+</span>
+                                        <span class="text" id="1959932218">More Reviews</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li layout="center" position="center" animation="none" show-content="true" color-overlay="true" text-background="true" id="1328995474" class="u_1328995474" show-caption="true"> <a href="/reviews" id="1291234267" file="false"><img dm="true" src="https://lirp.cdn-website.com/md/dmtmpl/dms3rep/multi/opt/transparent_background-1920w.png" id="1826384754" class="" onerror="handleImageLoadError(this)"/></a>
+                                <div class="color-overlay" id="1264890398"></div>
+                                <div class="slide-inner" id="1768753551"> <div class="text-wrapper" id="1461080532"> <h3 class="slide-title u_1096141639" id="1096141639">&quot;I have been so impressed with the service and level of cleaning! They offer a great service for short term rentals with linens included. My condo has been so sparkling clean and all the beds made to perfection. They are experts! Highly recommend!&quot;</h3>
+                                    <div class="slide-text u_1823893909" id="1823893909"><br/><p class="rteBlock">-Courtney H-</p></div>
+                                </div>
+                                    <div class="slide-button dmWidget clearfix slide-button-invisible" id="1076642417"> <span class="iconBg" id="1702941335"> <span class="icon hasFontIcon icon-star" id="1753938644"></span>
+</span>
+                                        <span class="text" id="1786593371">More Reviews</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li layout="center" position="center" animation="none" show-content="true" color-overlay="true" text-background="true" id="1280973294" class="u_1280973294" show-caption="true"> <a href="/reviews" id="1818149420" file="false"><img dm="true" src="https://lirp.cdn-website.com/bfe324c7/dms3rep/multi/opt/empty_02-1920w.png" id="1948085088" class="" alt="Great company. Friendly staff. Used them once while my other cleaner was out of town and decided to stay." onerror="handleImageLoadError(this)"/></a>
+                                <div class="color-overlay" id="1281494962"></div>
+                                <div class="slide-inner" id="1826220142"> <div class="text-wrapper" id="1575281328"> <h3 class="slide-title u_1291341548" id="1291341548">Great company. Friendly staff. Used them once while my other cleaner was out of town and decided to stay.</h3>
+                                    <div class="slide-text richText u_1372801417" id="1372801417"><br/><p class="rteBlock">-Emily F-</p></div>
+                                </div>
+                                    <div class="slide-button dmWidget clearfix slide-button-invisible" id="1046245290"> <span class="iconBg" id="1041669712"> <span class="icon hasFontIcon icon-star" id="1459400272"></span>
+</span>
+                                        <span class="text" id="1091688784">Button</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li layout="center" position="center" animation="none" show-content="true" color-overlay="true" text-background="true" id="1893897744" class="u_1893897744" show-caption="true"> <a href="/reviews" id="1100620029" file="false"><img dm="true" src="https://lirp.cdn-website.com/md/dmtmpl/dms3rep/multi/opt/transparent_background-1920w.png" id="1495906552" class="" onerror="handleImageLoadError(this)"/></a>
+                                <div class="color-overlay" id="1805180995"></div>
+                                <div class="slide-inner" id="1738837377"> <div class="text-wrapper" id="1475594299"> <h3 class="slide-title u_1233483875" id="1233483875">&quot;We use Team Clean to take care of cleaning and turning over our short term rental property in Dillon. They take care of whatever we need, and are able to provide hotel grade linens, cleaning, and any details we ask for. Very helpful--especially when we have same day check outs and check ins.&quot;</h3>
+                                    <div class="slide-text u_1445445399" id="1445445399"><br/><p class="rteBlock">-Matteo F-</p></div>
+                                </div>
+                                    <div class="slide-button dmWidget clearfix slide-button-invisible" id="1472328373"> <span class="iconBg" id="1501202385"> <span class="icon hasFontIcon icon-star" id="1684197594"></span>
+</span>
+                                        <span class="text" id="1236355761">More Reviews</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        </div>
+                        </div>
+                        <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1135672532" file="false" href="/reviews" data-element-type="dButtonLinkId" id="1135672532"> <span class="iconBg" id="1775961380"> <span class="icon hasFontIcon icon-star" id="1273305729"></span>
+</span>
+                            <span class="text" id="1771752056">Read more reviews</span>
+                        </a>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                    <div class="u_1968187821 dmRespCol small-12 large-4 medium-4" id="1968187821"> <div class="u_1004284610 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1004284610" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h2 class="m-size-25 text-align-center size-36"><span class="m-font-size-25 font-size-36" style="font-family: Montserrat; color: rgb(255, 255, 255); display: initial;">Team Clean services</span></h2>
+                    </div>
+                        <nav class="u_1413568036 effect-text-color unifiednav_vertical main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_1" layout-sub="" data-show-vertical-sub-items="HOVER" id="1413568036" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp-cdn.multiscreensite.com/bfe324c7/dms3rep/multi/Team-2BClean-2BOption-2B5-2B-281-29.png" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul class="unifiednav__container  " data-auto="navigation-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         House Cleaning Services
+        " data-auto="page-text-style">House Cleaning Services<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/vacation-home-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Vacation Home Services
+          " data-auto="page-text-style">Vacation Home Services<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/carpet-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Carpet Cleaning Services
+          " data-auto="page-text-style">Carpet Cleaning Services<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/snow-removal" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Snow Removal Services
+          " data-auto="page-text-style">Snow Removal Services<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/handyman" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Handyman Services
+          " data-auto="page-text-style">Handyman Services<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/laundry" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Laundry Services
+          " data-auto="page-text-style">Laundry Services<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/move-out-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Move Out Cleaning
+          " data-auto="page-text-style">Move Out Cleaning<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/post-construction-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Post Construction Cleaning
+          " data-auto="page-text-style">Post Construction Cleaning<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                            <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/commercial-services" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Commercial Cleaning Services
+        " data-auto="page-text-style">Commercial Cleaning Services<span class="icon icon-angle-down"></span> 
+</span>
+                            </a>
+                            </li>
+                        </ul>
+                        </nav>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+            <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="dmRespRow u_1667090493" id="1667090493"> <div class="dmRespColsWrapper" id="1513435788"> <div class="dmRespCol small-12 medium-12 large-12" id="1992051938"> <div class="dmNewParagraph u_1534884906" data-element-type="paragraph" data-version="5" id="1534884906" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h2 class="text-align-center"><span style="display: initial;">Do you want your home to be healthy &amp; clean?</span></h2>
+            </div>
+            </div>
+            </div>
+            </div>
+                <div class="u_1134096828 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1134096828"> <div class="dmRespColsWrapper" id="1781045050"> <div class="dmRespCol small-12 u_1196098995 large-3 medium-3" id="1196098995"> <span id="1273769299"></span>
+                    <div class="u_1693241702 graphicWidget" data-widget-type="graphic" id="1693241702" data-element-type="graphic" title="Call Team Clean"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1124506471" class="svg u_1124506471" data-icon-name="li_phone" alt="Call Team Clean"> <g> <path d="M36.2,22.1v2.2c5.5,0,10,4.5,10,10h2.2C48.4,27.6,42.9,22.1,36.2,22.1z"></path>
+                        <path d="M52.4,34.3h2.2c0-4.9-1.9-9.6-5.4-13.1c-3.5-3.5-8.1-5.4-13.1-5.4V18c4.4,0,8.5,1.7,11.5,4.8C50.7,25.9,52.4,30,52.4,34.3z
+		"></path>
+                        <path d="M65.1,57l-7.8,7.8L38.8,46.3l7.8-7.8l-15-15L23,32.1c-4.7,4.7-4.7,12.5,0,17.2l31.3,31.3c2.3,2.3,5.4,3.6,8.6,3.6
+		c3.2,0,6.3-1.3,8.6-3.6l8.6-8.6L65.1,57z M70,79.1c-1.9,1.9-4.4,2.9-7,2.9c-2.7,0-5.2-1-7-2.9L24.6,47.8c-3.9-3.9-3.9-10.2,0-14.1
+		l7-7l11.9,11.9l-7.8,7.8L57.3,68l7.8-7.8L77,72L70,79.1z"></path>
+                    </g>
+                    </svg>
+                    </div>
+                    <div class="u_1491741716 dmNewParagraph" id="1491741716" style="transition: none 0s ease 0s; text-align: left;" data-element-type="paragraph" data-version="5"> <h4 class="m-size-18 text-align-center size-18"><a href="tel:(970) 468-2378" type="call" class="m-font-size-18 font-size-18" m-font-size-set="true" style="color: rgb(49, 112, 142); text-decoration: underline; font-weight: 700; display: initial; font-family: Oxygen;" runtime_url="tel:(970) 468-2378">Call Team Clean</a></h4>
+                    </div></div>
+                    <div class="dmRespCol small-12 u_1014588530 large-3 medium-3" id="1014588530"> <span id="1637591242"></span>
+                        <div class="u_1258278648 graphicWidget" data-widget-type="graphic" id="1258278648" data-element-type="graphic" title="Team Clean services"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 70 70" id="1870537284" class="svg u_1870537284" data-icon-name="wp-list_ul" alt="Team Clean services"> <g> <circle cx="13" cy="21" r="3"></circle>
+                            <rect x="22" y="19" width="38" height="4"></rect>
+                            <circle cx="13" cy="35" r="3"></circle>
+                            <rect x="22" y="33" width="38" height="4"></rect>
+                            <circle cx="13" cy="49" r="3"></circle>
+                            <rect x="22" y="47" width="38" height="4"></rect>
+                        </g>
+                        </svg>
+                        </div>
+                        <div class="u_1754330055 dmNewParagraph" id="1754330055" style="transition: none 0s ease 0s; text-align: left;" data-element-type="paragraph" data-version="5"> <h4 class="m-size-18 text-align-center size-18"><a href="/contact-team-clean#contact-form" runtime_url="/contact-team-clean#contact-form" type="anchor" class="m-font-size-18 font-size-18" m-font-size-set="true" style="text-decoration: underline; display: initial; font-weight: bold; font-family: Oxygen; color: rgb(49, 112, 142);">Request services</a></h4>
+                        </div></div>
+                    <div class="u_1165548858 dmRespCol small-12 large-3 medium-3" id="1165548858"> <span id="1649703696"></span>
+                        <div class="u_1840103839 graphicWidget" data-widget-type="graphic" id="1840103839" data-element-type="graphic" title="Email Team Clean"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="1006918818" class="svg u_1006918818" data-icon-name="li-envelope" alt="Contact Team Clean"> <path d="M17.8,28.2v43.6h64.4V28.2H17.8z M77.7,30.3L50,48.8L22.3,30.3H77.7z M19.9,69.7V31.2L50,51.2l30.1-20.1v38.5H19.9z"></path>
+                        </svg>
+                        </div>
+                        <div class="u_1363134783 dmNewParagraph" id="1363134783" style="text-align: left;" data-element-type="paragraph" data-version="5"> <h4 class="text-align-center size-18 m-size-18"><a href="mailto:manager@teamclean.com" type="email" class="font-size-18 m-font-size-18" style="font-family: Oxygen; font-weight: 700; display: initial; text-decoration: underline; color: rgb(49, 112, 142);" m-font-size-set="true">Email Team Clean</a></h4>
+                        </div></div>
+                    <div class="dmRespCol small-12 u_1001352946 large-3 medium-3" id="1001352946"> <span id="1583820731"></span>
+                        <div class="u_1321934549 graphicWidget" data-widget-type="graphic" id="1321934549" data-element-type="graphic" title="Team Clean near me"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 70 70" id="1362924605" class="svg u_1362924605" data-icon-name="wp-location_pin_thin" alt="Team Clean near me"> <g> <path d="M35,10c-9.4,0-17,7.6-17,17c0,4.1,1.5,8,4.1,11.1l0.1,0.1c4.6,5.3,7.9,10.8,9.9,16.4l1,3.7l0,0.1c0.3,1.1,1,1.6,1.9,1.6
+		s1.6-0.5,1.9-1.6l1-3.8c1.9-5.6,5.3-11.2,9.9-16.4l0.1-0.1C50.5,35,52,31.1,52,27C52,17.6,44.4,10,35,10z M46.4,36.8L46.4,36.8
+		C41.5,42.3,38.1,48.1,36,54l0,0.1c0,0-1,3.7-1,3.7c0,0-0.1-0.2-0.1-0.2L34,54l0-0.1c-2-5.8-5.5-11.5-10.2-17l-0.1-0.1
+		C21.3,34.1,20,30.6,20,27c0-8.3,6.7-15,15-15s15,6.7,15,15C50,30.6,48.7,34.1,46.4,36.8z"></path>
+                            <path d="M35,34c-3.9,0-7-3.1-7-7s3.1-7,7-7c3.9,0,7,3.1,7,7S38.9,34,35,34z M35,22c-2.8,0-5,2.2-5,5s2.2,5,5,5c2.8,0,5-2.2,5-5
+		S37.8,22,35,22z"></path>
+                        </g>
+                        </svg>
+                        </div>
+                        <div class="u_1821625446 dmNewParagraph" id="1821625446" style="display: block; line-height: initial;" data-element-type="paragraph" data-version="5"> <h4 class="text-align-center size-18"><a href="/service-areas" runtime_url="/service-areas" type="page" class="font-size-18" style="text-decoration: underline; color: rgb(49, 112, 142); font-family: Oxygen; font-weight: 700; display: initial;">Visit our office</a></h4>
+                        </div></div>
+                </div>
+                </div>
+                <div class="u_1650086929 dmRespRow fullBleedChanged fullBleedMode" id="1650086929"> <div class="dmRespColsWrapper" id="1060620406"> <div class="u_1284143877 dmRespCol small-12 medium-12 large-12" id="1284143877"> <div class="dmRespRow u_1758812627 fullBleedChanged fullBleedMode" id="1758812627"> <div class="dmRespColsWrapper" id="1666998599"> <div class="u_1872895446 dmRespCol small-12 large-4 medium-4" id="1872895446"> <div class="u_1397458858 imageWidget align-center" data-widget-type="image" id="1397458858" data-element-type="image"> <a href="/" id="1294847067"><img src="https://lirp.cdn-website.com/bfe324c7/dms3rep/multi/opt/whiteslogan-2c8743ab-1920w.png" id="1786978446" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/bfe324c7/dms3rep/multi/whiteslogan-2c8743ab.png" alt="Team Clean cleaning services" title="Team Clean" onerror="handleImageLoadError(this)"/></a>
+                </div>
+                    <div class="u_1299246227 align-center text-align-center dmSocialHub" id="1299246227" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://google.com/maps/place/" target="_blank" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;GoogleMyBusiness&apos;)"> <span class="dmSocialGoogleMyBusiness dm-social-icons-google-my-business oneIcon socialHubIcon style8" data-hover-effect=""></span>
+                    </a>
+                        <a href="http://yelp.com/biz/" target="_blank" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Yelp&apos;)"> <span class="dmSocialYelp dm-social-icons-yelp oneIcon socialHubIcon style8" data-hover-effect=""></span>
+                        </a>
+                        <a href="mailto:helpdesk@teamclean.com" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)"> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style8" data-hover-effect=""></span>
+                        </a>
+                        <a href="https://facebook.com/Team-clean-121903599748093" target="_blank" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" data-hover-effect=""></span>
+                        </a>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                    <div class="u_1777126530 dmRespCol small-12 large-2 medium-2" id="1777126530"> <nav class="u_1520614845 unifiednav_vertical effect-text-fill main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_4" layout-sub="" data-show-vertical-sub-items="HOVER" id="1520614845" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp-cdn.multiscreensite.com/md/dmtmpl/91b196ea-1431-4610-8dba-45c1fd92315a/dms3rep/multi/desktop/univ-blueArtboard+3.svg" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul class="unifiednav__container  " data-auto="navigation-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/about-team-clean" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         About
+        " data-auto="page-text-style">About<span class="icon icon-angle-down"></span> 
+</span>
+                    </a>
+                    </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/frequently-asked-questions" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           FAQs
+          " data-auto="page-text-style">FAQs<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/reviews" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Testimonials
+          " data-auto="page-text-style">Testimonials<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/service-areas" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Service Areas
+        " data-auto="page-text-style">Service Areas<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                    </ul>
+                    </nav>
+                    </div>
+                    <div class="u_1469169532 dmRespCol small-12 large-3 medium-3" id="1469169532"> <nav class="u_1350377411 unifiednav_vertical effect-text-color main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HOVER" id="1350377411" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp-cdn.multiscreensite.com/md/dmtmpl/91b196ea-1431-4610-8dba-45c1fd92315a/dms3rep/multi/desktop/univ-blueArtboard+3.svg" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul class="unifiednav__container  " data-auto="navigation-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         House Cleaning Services
+        " data-auto="page-text-style">House Cleaning Services<span class="icon icon-angle-down"></span> 
+</span>
+                    </a>
+                    </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/vacation-home-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Vacation Home Services
+          " data-auto="page-text-style">Vacation Home Services<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/handyman" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Handyman Services
+          " data-auto="page-text-style">Handyman Services<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/carpet-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Carpet Cleaning Services
+          " data-auto="page-text-style">Carpet Cleaning Services<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/snow-removal" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Snow Removal Services
+          " data-auto="page-text-style">Snow Removal Services<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/laundry" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Laundry Services
+          " data-auto="page-text-style">Laundry Services<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/move-out-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Move Out Cleaning
+          " data-auto="page-text-style">Move Out Cleaning<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/services/post-construction-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Post Construction Cleaning
+          " data-auto="page-text-style">Post Construction Cleaning<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                    </ul>
+                    </nav>
+                    </div>
+                    <div class="u_1594957106 dmRespCol small-12 large-3 medium-3" id="1594957106"> <nav class="u_1401612005 unifiednav_vertical effect-text-color main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HOVER" id="1401612005" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp-cdn.multiscreensite.com/md/dmtmpl/91b196ea-1431-4610-8dba-45c1fd92315a/dms3rep/multi/desktop/univ-blueArtboard+3.svg" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul class="unifiednav__container  " data-auto="navigation-pages"> <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/commercial-services" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Commercial Cleaning Services
+        " data-auto="page-text-style">Commercial Cleaning Services<span class="icon icon-angle-down"></span> 
+</span>
+                    </a>
+                    </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/commercial-services/janitorial" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Janitorial Services
+          " data-auto="page-text-style">Janitorial Services<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/commercial-services/carpet-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Carpet Cleaning
+          " data-auto="page-text-style">Carpet Cleaning<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/commercial-services/office-cleaning" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Office Cleaning
+          " data-auto="page-text-style">Office Cleaning<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/commercial-services/vinyl-composition-tile" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Vinyl Composition Tile
+          " data-auto="page-text-style">Vinyl Composition Tile<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                        <li class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/commercial-services/building-maintenance" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Building Maintenance
+          " data-auto="page-text-style">Building Maintenance<span class="icon icon-angle-down"></span> 
+</span>
+                        </a>
+                        </li>
+                    </ul>
+                    </nav>
+                    </div>
+                </div>
+                </div>
+                    <div class="u_1223727982 dmRespRow fullBleedChanged fullBleedMode" id="1223727982"> <div class="dmRespColsWrapper" id="1454499155"> <div class="dmRespCol small-12 u_1404069562 medium-12 large-12" id="1404069562"> <div class="dmNewParagraph u_1122079516" data-element-type="paragraph" data-version="5" id="1122079516" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-center m-size-8 size-12"><span style="color: rgb(255, 255, 255); display: initial;" class="m-font-size-8 font-size-12">Copyright &copy; 2020 Team Clean.</span><span single-space="true" class="m-font-size-8 font-size-12" style="color: rgb(255, 255, 255); display: initial; text-decoration: none;"> <span style="color: rgb(255, 255, 255); display: initial; text-decoration: none;" class="m-font-size-8 font-size-12"></span>
+</span><a href="https://www.teamclean.com/privacy" target="_blank" runtime_url="https://www.teamclean.com/privacy" type="url" class="m-font-size-8 font-size-12" style="color: rgb(255, 255, 255); display: initial; text-decoration: none;">All Rights Reserved</a><span single-space="true" class="m-font-size-8 font-size-12" style="color: rgb(255, 255, 255); display: initial; text-decoration: none;"> <span class="m-font-size-8 font-size-12" style="color: rgb(255, 255, 255); display: initial; text-decoration: none;"></span> 
+</span><a href="https://www.teamclean.com/privacy" target="_blank" runtime_url="https://www.teamclean.com/privacy" type="url" class="m-font-size-8 font-size-12" style="display: initial; text-decoration: underline;">Privacy Policy</a><span single-space="true" class="m-font-size-8 font-size-12" style="display: initial;"> <span class="m-font-size-8 font-size-12" style="display: initial;"></span> 
+</span><a href="/" runtime_url="/" type="page" class="m-font-size-8 font-size-12" style="display: initial; color: rgb(255, 255, 255);">|</a> <a href="/" runtime_url="/" type="page" class="m-font-size-8 font-size-12" style="display: initial;"></a>
+                        <a href="/sitemap" runtime_url="/sitemap" type="page" class="m-font-size-8" style="display: initial; text-decoration: underline;">Sitemap</a><span class="m-font-size-8" style="display: initial; color: rgb(255, 255, 255);"><span class="m-font-size-8" style="display: initial; color: rgb(255, 255, 255);">&nbsp;</span>
+</span><a href="https://www.unyworks.com/" target="_blank" runtime_url="https://www.unyworks.com/" class="m-font-size-8" style="display: initial; color: rgb(255, 255, 255);">Built With Love By</a><span single-space="true" class="" style="display: initial;"> <span style="display: initial;"></span> 
+</span><a href="https://www.unyworks.com/" target="_blank" runtime_url="https://www.unyworks.com/" type="url" style="display: initial; color: rgb(143, 193, 227); text-decoration: underline;" class="m-font-size-8">UNYWORKS</a><span style="display: initial;"><br/></span></p></div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+                <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+<!-- ========= JS Section ========= -->
+
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+<script type="text/javascript">
+
+    var d_version = "14..64";
+    var build = "2022-05-26T12_51_37";
+    window['v'+'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2022-05-26T12_51_37";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            }
+            else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+
+
+</script>
+<!-- Load jQuery -->
+<script type="text/javascript" src="https://static.cdn-website.com/libs/jquery/jquery-3.6.0.min.js"></script>
+<!-- End Load jQuery -->
+
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var jquery = window.$;
+    Object.defineProperty(window, '$', {
+        get() {
+            return jquery;
+        },
+        set() {
+            console.warn("Trying to over-write the global jquery object!");
+        }
+    });
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = ' <div>We use cookies to ensure that we give you the best experience on our website. To learn more, go to the Privacy Page.<\/div> \n';
+</script>
+<script>
+    var shouldMonitorImages = false;
+    var numOfImageLoadErrorsReported = 0;
+    if(shouldMonitorImages) {
+        window.addEventListener('error', function(event) {
+            // log secured resources failures
+            if(event.target && event.target.src && event.target.src.includes
+                && event.target.src.includes('/s/')
+                && !event.target.src.includes('/_dm/s/rt/')) {
+                if (!window.fetch || numOfImageLoadErrorsReported > 4){
+                    return;
+                }
+                try {
+                    numOfImageLoadErrorsReported++;
+                    return fetch('/_dm/s/rt/actions/log/INFO', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ data: {
+                                tags: 'imageFailedToLoad',
+                                eventType: event.type,
+                                image: event.target.src,
+                                href: window.location.href
+                            } })
+                    });
+                } catch (error) {
+                    console.log(error);
+                }
+
+            }
+        }, { capture: true });
+    }
+
+</script>
+<!-- HEAD RT JS Include -->
+<script>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["facebook.accessToken"] = '126515034112906|8vv7JhnEegS8qz43fIOZjxGZReA';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["feature.flag.contactUsNewForm"] = 'true';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["google.places.key"] = 'AIzaSyBAwUOqPUB1CU31yDztoZYaUE7sPv4ktEI';
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"]=true;
+    rtCommonProps["common.build.dist.folder"]='production/2564';
+    rtCommonProps["common.resources.cdn.host"]='https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"]='https://static.cdn-website.com/mnlt/production/2564';
+    rtCommonProps["import.images.storage.useImageCDN"]=true;
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"]=true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"]=true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"]=true;
+
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['editor.infra.noPrefixedChanges'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["runtime.save.restore.function.bind"] =true;
+    rtCommonProps["feature.flag.photo.gallery.exact.size"] =false;
+    rtCommonProps["feature.flag.photo.gallery.lazy"] =true;
+    rtCommonProps["store.handleItemId.enabled"] =true;
+    rtCommonProps["new.store.fix.ecwid.back.bug"] =true;
+    rtCommonProps["new.store.accountPage.ecwid.signIn.fix"] =true;
+    rtCommonProps["fix.ecwid.sign.in.page.with.return.url"] =true;
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+    rtCommonProps["geocode.search.localize"] =false;
+    rtCommonProps["feature.flag.runtime.newAnimation.asyncInit.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+</script>
+<script src="https://static.cdn-website.com/mnlt/production/2564/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js" ></script>
+<!-- End of HEAD RT JS Include -->
+<script src="https://static.cdn-website.com/mnlt/production/2564/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+<script>jQuery.DM.updateWidthAndHeight();
+$(window).resize(function () {
+
+});
+$(window).bind("orientationchange", function (e) {
+    $.layoutManager.initLayout();
+
+});
+$(document).resize(function () {
+
+});
+</script>
+
+<script type="text/javascript" id="d_track_campaign">
+    (function() {
+        var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+        if (campaign && campaign != null && campaign.length > 1) {
+            campaign = campaign[1];
+            document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+        }
+    }());
+</script>
+<script type="text/javascript" >
+    var _dm_gaq = {};
+    var _gaq = _gaq || [];
+    var _dm_insite = [];
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2LRWM0X9M"></script>
+<script type="text/javascript" id="d_track_ga">
+    _dm_gaq.siteAlias = 'bfe324c7';
+    _dm_gaq.systemAggregatedGaqID = '';
+    _dm_gaq.externalGaqID = 'G-K2LRWM0X9M';
+    _dm_gaq.gaAggregatedEventAttributes = {
+        'site_alias':  _dm_gaq.siteAlias,
+        'product': 'DM_DIRECT',
+        'plan': 'BUSINESS_PLUS',
+        'dfooter': 'false',
+        'sitetype': '1',
+        'pwaEnabled': 'true'
+    }
+
+    _dm_gaq.pushEvent = function(trackingId, event, category, label, value, additionalParams) {
+        var initialProps = {
+            send_to: trackingId,
+            event_category: category,
+            event_label: label,
+            value: value
+        }
+        additionalParams = additionalParams || {};
+        var eventProps = $.extend({}, initialProps, additionalParams, trackingId === _dm_gaq.systemAggregatedGaqID?_dm_gaq.gaAggregatedEventAttributes:{});
+        gtag('event', event, eventProps);
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    function pushInsiteImpressions(id) {
+        $.each(_dm_insite, function(idx, rule) {
+            _dm_gaq.pushEvent(id, 'insite_impression', 'insite', rule.ruleType + '__' + rule.ruleId);
+        });
+    }
+
+    if(_dm_gaq.systemAggregatedGaqID){
+        // track aggregated account
+        gtag('config', '', {
+            'send_page_view': false,
+            'anonymize_ip': true,
+            'transport_type': 'beacon',
+            'custom_map': {'dimension1': 'site_alias', 'dimension2': 'product', 'dimension3': 'dFooter', 'dimension4': 'sitetype'}
+        });
+        gtag('set', 'developer_id.dMDU5Nj', true);
+
+        _dm_gaq.pushEvent('', 'page_view');
+        pushInsiteImpressions(_dm_gaq.systemAggregatedGaqID);
+    }
+
+    if(_dm_gaq.externalGaqID && _dm_gaq.externalGaqID!= '') {
+        gtag('config', 'G-K2LRWM0X9M', {
+            'send_page_view': false,
+            'anonymize_ip': true,
+            'transport_type': 'beacon',
+            'linker': {
+                'domains': ['teamclean.com']
+            }
+        });
+        _dm_gaq.pushEvent('G-K2LRWM0X9M', 'page_view');
+        pushInsiteImpressions(_dm_gaq.externalGaqID);
+    }
+
+</script>
+<script type="text/javascript" id="d_track_sp">
+    ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+        p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+        };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+        n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+    window.dmsnowplow  = window.snowplow;
+
+    dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+        appId: 'bfe324c7'
+    });
+
+    dmsnowplow('trackPageView')
+    $.each(_dm_insite, function(idx, rule) {
+        //('trackStructEvent', 'category','action','label','property','value');
+        // Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+        // the tracking is in popup.js
+        if (rule.actionName !== "popup") {
+            dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+        }
+        $(document).ready(function(){
+            $.DM.events.trigger('event-ruleTriggered', {value: rule})}
+        );
+    });
+</script>
+<div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root"
+     data-locale="en"></div>
+<!-- Alias: bfe324c7 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+    <div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+    <div class="dmPopupTitle"> <span></span> Share by:</div>
+    <div class="data"></div>
+</div><script id="d_track_personalization">
+    // Collects client data and updates cookies used by smart sites
+    var expireDays = 365,visitLength = 30 * 60000;
+    $.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), expireDays);
+    function setSmartSiteCookies() {
+        setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+    }
+    $.DM.events.on("afterAjax", setSmartSiteCookies);
+    setSmartSiteCookies();
+</script>
+<script type="text/javascript">
+
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+</script>
+
+<script>
+
+    jQuery(window).on('load', function () {
+        try {
+            jQuery.DM.updateIOSHeight();
+        } catch (e) {
+        }
+
+    });
+</script>
+<script>
+    dmAPI.loadScript(
+        window.rtCommonProps['common.resources.cdn.host'] + '/libs/lozad/1.15.0/lozad.min.js',
+        function () {
+            dmAPI.runOnReady('lozadInit', function () {
+                window.document.querySelectorAll('img.lazy').forEach(function (img) {
+                    img.addEventListener('load', function (event) {
+                        var img = event.target;
+                        img.style.filter = 'blur(0)';
+                        setTimeout(function () {
+                            $(img).closest('.imageWidget').addClass('lazyLoaded');
+                        }, 250)
+                    });
+                });
+                lozad('.lazy', {
+                    threshold: 0.1,
+                    loaded: function (element) {
+                        if (element.getAttribute('data-background-image')) {
+                            element.style.setProperty(
+                                'background-image',
+                                "url('" + element.getAttribute('data-background-image') + "')",
+                                "important"
+                            );
+                        }
+                    }
+                }).observe();
+            });
+        }
+    );
+</script>
+<script id="ssr-script" type="text/javascript">
+</script>
+<!--  End Script tags -->
+
+<!--  Begin Body End Markup -->
+<!--Start of analytics Script--><script id="analyticsId" type="text/javascript" src="https://analytics-5900.kxcdn.com/analytics.js" data-id="SWxKQ2JXOVVaRU13YjJKa1VsQTBhVVJ4U1dseUsyYzlQU0k9" async></script><!--End of analytics Script-->
+<script async src="//314179.tctm.co/t.js"></script><!--  End Body End Markup -->
+
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+</body>
+</html>
